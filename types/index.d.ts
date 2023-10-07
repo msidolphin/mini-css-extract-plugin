@@ -13,6 +13,11 @@ declare class MiniCssExtractPlugin {
     webpack: Compiler["webpack"]
   ): CssDependencyConstructor;
   /**
+   * Returns all hooks for the given compiler
+   * @param {Compiler} compiler
+   */
+  static getHooks(compiler: Compiler): import("./hooks").MiniCssExtractHooks;
+  /**
    * @param {PluginOptions} [options]
    */
   constructor(options?: PluginOptions | undefined);
